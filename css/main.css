@@ -68,7 +68,9 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  /*background: linear-gradient(to bottom, #e86767 319px, #fff 320px, #fff) no-repeat;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .promo {
   display: -webkit-flex;
@@ -265,7 +267,7 @@ body {
 }
 
 .promo__footer a:nth-child(2) {
-  background-position: 8px -70px;
+  background-position: 8px -69px;
   -webkit-background-size: 24px;
   background-size: 24px;
 }
