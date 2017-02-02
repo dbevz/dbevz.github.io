@@ -288,3 +288,28 @@ body {
   -webkit-background-size: 24px;
   background-size: 24px;
 }
+
+@media all and (max-width: 939px) {
+  .promo {
+    width: 600px;
+  } 
+  .promo__photo {
+    display: none;
+  }
+  .promo__info {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .promo__info-list {
+    margin-top: 0px;
+    order: 3;
+  }
+  .promo__nav {
+    margin: 0rem 0 1rem 0;
+    order: 1;
+  }
+  header {
+    order: 2;
+  }
+}
