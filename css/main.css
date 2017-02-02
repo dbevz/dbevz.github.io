@@ -1,0 +1,288 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  Этот код используеться в начале css для того, чтобы ширина и высота блока вели себя предсказуемо */
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box; /* Needed for mobile WebKit */
+    -moz-box-sizing: border-box; /* Needed for Firefox */
+    box-sizing: border-box
+}
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  min-height: 100%;
+  color: #333;
+}
+
+body {
+  background-color: #efefef;
+  background-image: url(../img/bg.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background: linear-gradient(to bottom, #e86767 319px, #fff 320px, #fff) no-repeat;*/
+}
+.promo {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  width: 940px;
+  margin: auto;
+  margin-top: 80px;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.promo__nav {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5rem 0 1.6rem 0;
+}
+
+.promo__nav a {
+  color: #999;
+  margin: 0 1rem;
+  text-decoration: none;
+  /*color: #3d4451 !important;
+  background: transparent;*/
+  padding: 10px 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  word-spacing: 2px;
+}
+
+.promo__nav a:after {
+  display:block;
+  content: '';
+  height: 4px;
+  margin-top: 8px;
+  width: 0%;
+  transition: width 0.2s ease-out;
+}
+
+.promo__nav a:hover {
+  color: #000;
+}
+
+.promo__nav a:hover:after {
+  background-color: #e86767;
+  width: 100%;
+
+}
+
+.promo__main {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 15px 0;
+}
+
+.promo__photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 392px;
+  /*margin: 0 2.5rem;*/
+}
+
+.promo__photo img {
+  height: 405px;
+  width: 300px;
+}
+.promo__info {
+  width: 548px;
+  padding: 0 60px 0 0;
+}
+
+.promo__info-list {
+  margin-top: 30px;
+}
+.promo__info-list li {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: .9rem;
+  line-height: 1.2;
+}
+
+.promo__info-list li span:first-child {
+  width: 25%;
+  font-weight: 600;
+  color: #333;
+}
+
+.promo__info-list li span:last-child {
+  width: 75%;
+  color: #9da0a7;
+}
+
+.promo__info-list li span:last-child a {
+  color: #9da0a7;
+  text-decoration: none;
+}
+
+.promo__info-list li span:last-child a:hover {
+  color: #e86767;
+  font-weight: 600;
+}
+
+.preword {
+  background-color: #e86767;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.1;
+  display: inline-block;
+  padding: 7px 12px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.preword:before {
+  content: '';
+  width: 0;
+  height: 0;
+  top: 100%;
+  left: 5px;
+  display: block;
+  position: absolute;
+  border-style: solid;
+  border-width: 0 0 8px 8px;
+  border-left-color: #e86767;
+}
+.promo__info h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 14px 0 5px 0;
+}
+
+.promo__info h1 span {
+  font-weight: 300;
+}
+
+.promo__info h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  font-weight: 400;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #dedede;
+}
+
+.promo__footer {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 0 0;
+  background-color: #e86767;
+  padding: 15px 0;
+}
+
+.promo__footer a {
+  color: #fff;
+  margin: 0 1.7rem;
+  text-decoration: none;
+  text-indent: -99999px;
+  background: url(../img/social-icons.svg) no-repeat;
+  -webkit-background-size: 24px;
+  background-size: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%
+}
+
+.promo__footer a:hover {
+  background-color:rgba(0, 0, 0, 0.1);
+}
+
+.promo__footer a:nth-child(1) {
+  background-position: 9px -10px;
+}
+
+.promo__footer a:nth-child(2) {
+  background-position: 8px -70px;
+  -webkit-background-size: 24px;
+  background-size: 24px;
+}
+
+.promo__footer a:nth-child(3) {
+  background-position: 10px -92px;
+
+}
+
+.promo__footer a:nth-child(4) {
+  background-position: 11px -116px;
+  -webkit-background-size: 18px;
+  background-size: 18px;
+}
+
+.promo__footer a:nth-child(5) {
+  background-position: 8px -205px;
+  -webkit-background-size: 24px;
+  background-size: 24px;
+}
