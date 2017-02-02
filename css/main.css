@@ -60,6 +60,7 @@ html, body {
   font-size: 16px;
   min-height: 100%;
   color: #333;
+  
 }
 
 body {
@@ -68,7 +69,9 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
 .promo {
   display: -webkit-flex;
   display: -moz-flex;
@@ -78,7 +81,7 @@ body {
   flex-direction: column;
   width: 940px;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 10vh;
   border-radius: 2px;
   background-color: #fff;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
