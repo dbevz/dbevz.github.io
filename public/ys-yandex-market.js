@@ -12,6 +12,7 @@ var getReviews = function(id) {
   
   header = html.querySelectorAll('.link.n-smart-link.i-bem')[1].innerText;
   header = '<h1><a href="' + url + '">' + header + '</a></h1>';
+  mention = mention + header;
   console.log(header + " - Просканировано");
   headerTmp = header;
   var reviews = html.querySelectorAll('.product-review-item.product-review-item_collapsed_yes.js-review');
@@ -36,11 +37,10 @@ var getReviews = function(id) {
     author = "<h2>" + author + "</h2>";
     rating = "<h3>Оценка: " + rating + "     Опубликовано: " + marketDate.day + "." + (marketDate.month + 1) + "." + marketDate.year + "</h3>";
     content = "<p>" + content + "</p><br />";
-    mention = header + author + rating + content;
-    console.log(header);
+    mention = mention + author + rating + content;
   }
     if (headerTmp == mention) {
-      header = "";
+      mention = "";
     }
   //console.log(header);
 }
