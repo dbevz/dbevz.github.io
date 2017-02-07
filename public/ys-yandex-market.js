@@ -1,3 +1,5 @@
+var userDate;
+
 var getReviews = function(id) {
   var url = 'https://market.yandex.ru/product/' + id + '/reviews?hid=90490&sort_by=date';
   var xhr = new XMLHttpRequest();
@@ -34,9 +36,13 @@ var getReviews = function(id) {
     author = "<h2>" + author + "</h2>";
     rating = "<h3>Оценка: " + rating + "     Опубликовано: " + marketDate.day + "." + (marketDate.month + 1) + "." + marketDate.year + "</h3>";
     content = "<p>" + content + "</p><br />";
-    header = header + author + rating + content;
+    mention = header + author + rating + content;
+    console.log(header);
   }
-    if (headerTmp == header) header = "";
+    if (headerTmp == mention) {
+      header = "";
+      mention = "";
+    }
   //console.log(header);
 }
 
@@ -88,15 +94,43 @@ var compareDate = function(userDate, marketDate) {
   return true;
 }
 
+function renderMentions(id) {
+  document.head.innerHTML = "";
+  document.body.innerHTML = '<div id="main"></div><style>h1{text-align: center}</style>';
+  userDate = getDateObjectFromUser();
+  for (var i = 0; i < id.length; i++) {
+    var rev = document.createElement('div');
+    mention = "";
+    getReviews(id[i]);
+    rev.innerHTML = mention;
+    document.querySelector('#main').appendChild(rev);
+  }
 
+  alert("Сбор данных заверщен!"); 
+}
 
+function onStart() {
+  document.head.innerHTML = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">';
+  document.body.innerHTML = '<div style="display: flex; margin: auto; margin-top: 200px; justify-content: space-around; width: 300px;">\
+  <a class="waves-effect waves-light btn-large" onclick="getId(2)">Michelin</a>\
+  <a class="waves-effect waves-light btn-large" onclick="getId(1)">Pirelli</a></div>'
+}
 
-
-
-//var url = 'https://market.yandex.ru/product/' + id + '/reviews?hid=90490&sort_by=date';
-
-
-var id = ['10452984', '8356258', '7914484', '5070699', '7879850', '10731581', '8471093', '5070643', '7700227', '6474769',
+function getId(theme) {
+  var id;
+  if (theme == 1) { // id для тем пирелли
+    id = ['10574940', '5070963', '14109893', '14111122', '5070894', '12938242', '7294992', '7856977',
+    '8478396', '12911931', '5080809', '5070847', '10847131', '5070853', '10608922', '5070882', '5070881', '7711520',
+    '5070888', '5070946', '5070854', '11927443', '5070846', '5070852', '6413303', '5070962', '8478122', '5070834',
+    '9235420', '5070845', '7709371', '5070873', '9353143', '5070844', '14109899', '10674822', '5070869', '6448630', 
+    '5070885', '5070862', '7810205', '5070860', '5070883', '5070848', '5070886', '5070839', '5070855', '12917927', '5070849',
+    '5070970', '9389310', '5070856', '5070843', '5070829', '5070857', '5070961', '5070840', '5070892', '5070836',
+    '5070851', '5070826', '5070841', '5070827', '5070859', '5070871', '12921136', '5070884', '10531051', '5070867',
+    '5070824', '11034851', '5070837', '5070842', '6531670', '5070880', '5070876', '6414760', '5070870', '13186753',
+    '5070874', '5070832', '5070969', '5070825', '5070832', '5070969', '11927442', '5070838', '10890195', '5070835',
+    '5070831', '5070947', '5070868', '5070965', '5070830', '11036101', '6839941', '5070823'];
+  } else {
+    id = ['10452984', '8356258', '7914484', '5070699', '7879850', '10731581', '8471093', '5070643', '7700227', '6474769',
           '12832998', '13439283', '11004372', '8471098', '6984531', '5070719', '5070632', '5070721', '6161432', '5070641',
           '5070630', '13485933', '5070722', '5070693', '6299243', '9338314', '5070644', '5070686', '5070628', '10768656', 
           '5070640', '9338278', '5070624', '5070599', '5070639', '5070588', '5070654', '5070598', '5070669', '5070668',
@@ -110,15 +144,10 @@ var id = ['10452984', '8356258', '7914484', '5070699', '7879850', '10731581', '8
           '5070615', '5070586', '14002118', '5070703', '7281605', '7073337', '5070611', '7290178', '5070623', '5070691',
           '10378066', '13439509', '13441983', '5070709', '6425584', '5070696', '5070718', '5070707', '13828561', '5070634',
           '7919631', '5070604', '5070704', '5070589', '6174327', '5070710', '7290467'];
+  }
 
-document.body.innerHTML = '<div id="main"></div><style>h1{text-align: center}</style>'
-var userDate = getDateObjectFromUser();
-for (var i = 0; i < id.length; i++) {
-  var rev = document.createElement('div');
-  var header = "";
-  getReviews(id[i]);
-  rev.innerHTML = header;
-  document.querySelector('#main').appendChild(rev);
+  renderMentions(id);
 }
 
-alert("Сбор данных заверщен!");
+
+onStart();
