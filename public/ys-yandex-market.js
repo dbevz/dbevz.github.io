@@ -41,7 +41,6 @@ var getReviews = function(id) {
   }
     if (headerTmp == mention) {
       header = "";
-      mention = "";
     }
   //console.log(header);
 }
