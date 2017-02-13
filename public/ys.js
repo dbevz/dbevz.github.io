@@ -9,11 +9,11 @@
 
   .E34WKG5Q - блок сообщения
 */
-var deleteButtonClass = '.MQ0AeMqz5AunsDgkMTSGp';
-var cardClass = '.E34WKG5Q8sTeAJELcKixI';
-var readButtonClass = '._1OLLhpmZS3oIGfqwwdKjem';
-var selectButtonClass = '.MQ0AeMqz5AunsDgkMTSGp.hyt42JGUbx6loZNk2cpyS';
-var doneButtonClass = '.MQ0AeMqz5AunsDgkMTSGp.hyt42JGUbx6loZNk2cpyS';
+var deleteButtonClass = '._3dXMsHMT34_iTDaHnUYXuC';
+var cardClass = '.BnhNRlVOS12DbWb48C-pt';
+var readButtonClass = '._1e36yah_heWHc6SboIWHVV';
+var selectButtonClass = '._3dXMsHMT34_iTDaHnUYXuC';
+var doneButtonClass = '._3dXMsHMT34_iTDaHnUYXuC';
 
 var elem = new Object();
 var index = 0;
