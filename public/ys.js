@@ -151,7 +151,7 @@ document.onkeydown = function(e) {
 document.onclick = function(e) {
   var target = e.target;
   while (target != document) {
-    if ($(target).hasClass('E34WKG5Q8sTeAJELcKixI')) {
+    if ($(target).hasClass('BnhNRlVOS12DbWb48C-pt')) {
       $(elem.val).toggleClass('active-card');
       elem.val = target;
       var tmp = document.querySelectorAll(cardClass);
