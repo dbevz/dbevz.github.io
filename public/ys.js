@@ -146,6 +146,9 @@ document.onkeydown = function(e) {
     elem.select();
     e.preventDefault();
   }
+  if (e.altKey) {
+    e.preventDefault();
+  }
 };
 
 document.onclick = function(e) {
