@@ -34,11 +34,6 @@ globalButton.delete = function() {
   var button = $('')[];
   $(button).click();
 }
-
-globalButton.delete = function() {
-  var button = $('')[];
-  $(button).click();
-}
 */
 elem.val = $(cardClass)[index];
 $(elem.val).toggleClass('active-card');
