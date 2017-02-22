@@ -161,6 +161,22 @@ document.onkeydown = function(e) {
     elem.select();
     e.preventDefault();
   }
+  
+  if ((e.altKey && e.keyCode == '1'.charCodeAt(0))) {
+    elem.positiveSentiment();
+    e.preventDefault();
+  }
+  
+  if ((e.altKey && e.keyCode == '2'.charCodeAt(0))) {
+    elem.neturalSentiment();
+    e.preventDefault();
+  }
+  
+  if ((e.altKey && e.keyCode == '3'.charCodeAt(0))) {
+    elem.negativeSentiment();
+    e.preventDefault();
+  }
+  
   if (e.altKey) {
     e.preventDefault();
   }
