@@ -113,6 +113,21 @@ elem.select = function() {
   selectButton.click();
 };
 
+elem.positiveSentiment = function() {
+  var selectButton = elem.val.querySelectorAll(selectButtonClass)[7];
+  selectButton.click();
+};
+
+elem.neturalSentiment = function() {
+  var selectButton = elem.val.querySelectorAll(selectButtonClass)[8];
+  selectButton.click();
+};
+
+elem.negativeSentiment = function() {
+  var selectButton = elem.val.querySelectorAll(selectButtonClass)[9];
+  selectButton.click();
+};
+
 document.onkeydown = function(e) {
   if ((e.keyCode == 38)) {
     elem.prev();
