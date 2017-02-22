@@ -162,17 +162,17 @@ document.onkeydown = function(e) {
     e.preventDefault();
   }
   
-  if ((e.altKey && e.keyCode == '1'.charCodeAt(0))) {
+  if ((e.altKey && e.keyCode == 49)) {
     elem.positiveSentiment();
     e.preventDefault();
   }
   
-  if ((e.altKey && e.keyCode == '2'.charCodeAt(0))) {
+  if ((e.altKey && e.keyCode == 50)) {
     elem.neturalSentiment();
     e.preventDefault();
   }
   
-  if ((e.altKey && e.keyCode == '3'.charCodeAt(0))) {
+  if ((e.altKey && e.keyCode == 51)) {
     elem.negativeSentiment();
     e.preventDefault();
   }
