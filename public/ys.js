@@ -68,7 +68,7 @@ elem.prev = function() {
 };
 
 elem.done = function() {
-  var doneButton = elem.val.querySelectorAll(doneButtonClass)[9];
+  var doneButton = elem.val.querySelectorAll(doneButtonClass)[10];
   
   $(elem.val).toggleClass('active-card');
   doneButton.click();
@@ -86,7 +86,7 @@ elem.done = function() {
 }
 
 elem.delete = function() {
-  var deleteButton = elem.val.querySelectorAll(deleteButtonClass)[3];
+  var deleteButton = elem.val.querySelectorAll(deleteButtonClass)[4];
 
   $(elem.val).toggleClass('active-card');
   deleteButton.click();
@@ -109,7 +109,7 @@ elem.read = function() {
 };
 
 elem.select = function() {
-  var selectButton = elem.val.querySelectorAll(selectButtonClass)[5];
+  var selectButton = elem.val.querySelectorAll(selectButtonClass)[6];
   selectButton.click();
 };
 
