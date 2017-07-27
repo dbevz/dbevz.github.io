@@ -15,17 +15,17 @@ var getReviews = function(id) {
   mention = mention + header;
   console.log(header + " - Просканировано");
   headerTmp = header;
-  var reviews = html.querySelectorAll('.product-review-item.product-review-item_collapsed_yes.js-review');
+  var reviews = html.querySelectorAll('.n-product-review-item.n-product-review-item_collapsed_yes');
 
   for (var i = 0; i < reviews.length; i++) {
     var elem = reviews[i];
     //var marketDate = elem.querySelector();
     
-    var date = elem.querySelector('.product-review-item__footer.layout.layout_display_table > .layout__col').innerText;
+    var date = elem.querySelector('.n-product-review-item__footer > .n-product-review-item__date-region').innerText;
     var marketDate = getDateObjectFromMarket(date);
     if ( compareDate(userDate, marketDate) ) break;
 
-    var author = elem.querySelector('.product-review-user__name').innerText;
+    var author = elem.querySelector('.n-product-review-user__name').innerText;
     var rating = elem.querySelector('.rating.hint.i-bem.rating_size_m.rating_border_yes').innerText;
     var contentArray = elem.querySelectorAll('dl');
     var content = '';
