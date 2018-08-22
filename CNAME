@@ -1,2 +1,7 @@
 dbevz.pp.ua
 @	14400	А	195.149.114.21
+mail	14400	А	195.149.114.21
+www	14400	А	195.149.114.21
+ftp	14400	CNAME	dbevz.pp.ua.
+@	14400	MX	mail.dbevz.pp.ua.
+10
