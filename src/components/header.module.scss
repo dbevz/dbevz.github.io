@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0 25px 20px;
+  position: relative;
+  width: 1000px;
+  margin: 0 0 80px auto;
+  border-bottom: solid 1px #333;
+}
+
+.logo {
+  position: absolute;
+  text-decoration: none;
+  display: block;
+  height: 100px;
+  width: 100px;
+  top: 25px;
+  left: -150px;
+}
+
+.img {
+  margin: 0;
+}
+
+.link {
+  padding: 16px;
+  text-decoration: none;
+  color: #333;
+
+  &:hover {
+    background-color: #E9D460;
+    color: #333;
+  }
+}

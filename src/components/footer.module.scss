@@ -1,0 +1,58 @@
+.footer {
+  width: 100%;
+  border-top: solid 1px #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 0;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.listItem {
+  margin: 0 16px;
+  text-indent: -999999px;
+}
+
+%link {
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  &:hover {
+    fill: red;
+  }
+}
+
+.github {
+  @extend %link;
+  /*background-image: url(../static/img/github.svg);*/
+  background-image: url(../static/img/github.svg);
+  
+  &:hover {
+    fill: red;
+  }
+}
+
+.twitter {
+  @extend %link;
+  background-image: url(../static/img/twitter.svg);
+}
+
+.facebook {
+  @extend %link;
+  background-image: url(../static/img/facebook.svg);
+}
+
+.linkedin {
+  @extend %link;
+  background-image: url(../static/img/linkedin.svg);
+}
